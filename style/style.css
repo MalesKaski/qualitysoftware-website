@@ -6,7 +6,7 @@
   --text-color: #292929;
   --main-color: #0094ff;
 
-  --header-height: 9rem;
+  --header-height: 7rem;
   --page-padding: 8%;
   --content-width: 140rem;
 }
@@ -86,9 +86,9 @@ body.dark-mode .dark-logo {
   left: 0;
 
   width: 100%;
-  min-height: var(--header-height);
+  height: var(--header-height);
 
-  padding: 1.5rem var(--page-padding);
+  padding: 0 var(--page-padding);
 
   display: flex;
   align-items: center;
@@ -97,6 +97,14 @@ body.dark-mode .dark-logo {
   background: var(--bg-color);
 
   z-index: 1000;
+
+  transition:
+    background-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.header.sticky {
+  box-shadow: 0 0.6rem 2rem rgba(0, 0, 0, 0.08);
 }
 
 .logo {
@@ -108,13 +116,13 @@ body.dark-mode .dark-logo {
 
 .logo-img {
   display: block;
-  width: clamp(24rem, 28vw, 42rem);
+  width: clamp(20rem, 20vw, 31rem);
 }
 
 .navbar {
   display: flex;
   align-items: center;
-  gap: clamp(1.8rem, 2vw, 3.5rem);
+  gap: 2.8rem;
 
   white-space: nowrap;
 }
@@ -123,6 +131,7 @@ body.dark-mode .dark-logo {
   font-size: 1.6rem;
   font-weight: 500;
 
+  position: relative;
   transition: color 0.2s ease;
 }
 
@@ -134,7 +143,7 @@ body.dark-mode .dark-logo {
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.2rem;
 
   flex-shrink: 0;
 }
@@ -149,7 +158,7 @@ body.dark-mode .dark-logo {
   background: transparent;
   color: var(--text-color);
 
-  font-size: 1.8rem;
+  font-size: 2rem;
 
   cursor: pointer;
 }
@@ -528,27 +537,27 @@ span {
 
   .navbar.active {
     position: absolute;
-    top: 100%;
-    left: 0;
+    top: calc(100% + 0.8rem);
+    right: var(--page-padding);
+    left: auto;
 
     display: flex;
     flex-direction: column;
     align-items: stretch;
 
-    width: 100%;
-    padding: 1.5rem var(--page-padding) 2rem;
+    width: 24rem;
+    padding: 1rem 1.4rem;
 
     background: var(--bg-color);
-    border-top: 0.1rem solid rgba(0, 0, 0, 0.08);
-
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.08);
+    border: 0.1rem solid rgba(0, 0, 0, 0.08);
+    border-radius: 1rem;
+    box-shadow: 0 1rem 2.4rem rgba(0, 0, 0, 0.1);
   }
 
   .navbar.active a {
     width: 100%;
-    padding: 1.2rem 0;
-
-    font-size: 1.7rem;
+    padding: 1rem 0.8rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -559,7 +568,7 @@ span {
 @media (max-width: 768px) {
   :root {
     --page-padding: 5%;
-    --header-height: 8rem;
+    --header-height: 6.4rem;
   }
 
   html {
@@ -567,15 +576,16 @@ span {
   }
 
   .logo-img {
-    width: clamp(20rem, 48vw, 30rem);
+    width: 22rem;
   }
 
   .header {
-    gap: 1.5rem;
+    gap: 1.2rem;
   }
 
   .header-actions {
     gap: 1rem;
+    margin-left: auto;
   }
 
   .home {
@@ -640,8 +650,12 @@ span {
     padding-right: 2rem;
   }
 
+  .header-actions {
+    gap: 1.8rem;
+  }
+
   .logo-img {
-    width: 19rem;
+    width: 18rem;
   }
 
   #language-icon {
@@ -659,5 +673,11 @@ span {
   section {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .navbar.active {
+    left: var(--page-padding);
+    right: var(--page-padding);
+    width: auto;
   }
 }
