@@ -1,10 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Quando&display=swap");
 
 :root {
   --bg-color: #dddddd;
   --second-bg-color: #aaaaaa;
   --text-color: #292929;
   --main-color: #0094ff;
+
+  --font-primary: "Poppins", sans-serif;
+  --font-tech: "Consolas", monospace;
+  --font-brand: "Quando", serif;
 
   --header-height: 7rem;
   --page-padding: 8%;
@@ -38,7 +42,7 @@ body {
   min-width: 32rem;
   background: var(--bg-color);
   color: var(--text-color);
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-primary);
 }
 
 a {
@@ -186,8 +190,7 @@ section {
   text-align: center;
 }
 
-.heading span,
-span {
+.heading span {
   color: var(--main-color);
 }
 
@@ -198,52 +201,57 @@ span {
 .home {
   min-height: 100vh;
 
-  padding-top: calc(var(--header-height) + 6rem);
+  padding: calc(var(--header-height) + 4rem) var(--page-padding) 6rem;
 
   display: grid;
   grid-template-columns:
-    minmax(0, 1.1fr)
-    minmax(30rem, 0.9fr);
+    minmax(0, 1.15fr)
+    minmax(30rem, 0.85fr);
 
   align-items: center;
-  gap: 6rem;
+  gap: 8rem;
 
   position: relative;
 }
 
 .home-content {
-  max-width: 68rem;
+  width: 100%;
+  max-width: 76rem;
 }
 
 .home-content h1 {
-  font-size: clamp(4.8rem, 5vw, 7rem);
+  font-family: var(--font-brand);
+
+  font-size: clamp(4.6rem, 4.5vw, 6.4rem);
   font-weight: 700;
-  line-height: 1.1;
+  line-height: 1.05;
+  letter-spacing: -0.15rem;
 }
 
 .home-content h1 span {
   color: var(--text-color);
 }
 
-.text-animate {
-  margin-top: 1rem;
+.text-animate h3 {
+  font-family: var(--font-tech);
+  font-size: clamp(2rem, 2vw, 2.8rem);
+  font-weight: 500;
+  line-height: 1.3;
+
+  color: var(--main-color);
 }
 
-.text-animate h3 {
-  font-size: clamp(2.2rem, 2.5vw, 3.2rem);
-  font-weight: 700;
-
-  color: transparent;
-  -webkit-text-stroke: 0.7px var(--main-color);
+.text-animate {
+  margin-top: 1.2rem;
 }
 
 .home-content p {
-  max-width: 65rem;
+  max-width: 62rem;
 
-  margin: 2rem 0 3.5rem;
+  margin: 2.4rem 0 3.2rem;
 
   font-size: 1.6rem;
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
 /* =========================
@@ -251,15 +259,16 @@ span {
    ========================= */
 
 .home-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  max-width: 55rem;
-
-  justify-self: end;
 }
 
 .hero-logo {
   display: block;
-  width: 100%;
+  width: min(100%, 48rem);
+  height: auto;
 }
 
 /* =========================
@@ -316,12 +325,12 @@ span {
    ========================= */
 
 .home-sci {
-  position: absolute;
-  left: var(--page-padding);
-  bottom: 4rem;
+  position: static;
 
   display: flex;
   gap: 1.2rem;
+
+  margin-top: 5rem;
 }
 
 .home-sci a {
@@ -526,7 +535,7 @@ span {
    TABLET
    ========================= */
 
-@media (max-width: 1300px) {
+@media (max-width: 1100px) {
   .navbar {
     display: none;
   }
@@ -559,6 +568,15 @@ span {
     padding: 1rem 0.8rem;
     font-size: 1.6rem;
   }
+
+  .home {
+    grid-template-columns: minmax(0, 1.1fr) minmax(28rem, 0.9fr);
+    gap: 4rem;
+  }
+
+  .hero-logo {
+    width: min(100%, 40rem);
+  }
 }
 
 /* =========================
@@ -587,20 +605,24 @@ span {
     gap: 1rem;
     margin-left: auto;
   }
-
   .home {
-    min-height: auto;
-
     grid-template-columns: 1fr;
-
-    padding-top: calc(var(--header-height) + 6rem);
-    padding-bottom: 10rem;
-
+    gap: 4rem;
+    padding-top: calc(var(--header-height) + 5rem);
     text-align: center;
   }
 
   .home-content {
-    max-width: 100%;
+    max-width: 70rem;
+    margin: 0 auto;
+  }
+
+  .home-img {
+    order: -1;
+  }
+
+  .hero-logo {
+    width: min(70vw, 32rem);
   }
 
   .home-content p {
@@ -610,11 +632,6 @@ span {
 
   .btn-box {
     justify-content: center;
-  }
-
-  .home-img {
-    max-width: 38rem;
-    justify-self: center;
   }
 
   .home-sci {
