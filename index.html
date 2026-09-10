@@ -15,272 +15,357 @@
 
   <body>
     <header class="header">
-      <a href="#" , class="logo">
-        <img class="logo-img light-logo" src="img/logo_text_black.png" />
-        <img class="logo-img dark-logo" src="img/logo_text_colour.png" />
+      <a href="#home" class="logo">
+        <img
+          class="logo-img light-logo"
+          src="img/logo_text_black.png"
+          alt="Quality Software"
+        />
+        <img
+          class="logo-img dark-logo"
+          src="img/logo_text_colour.png"
+          alt="Quality Software"
+        />
       </a>
 
-      <div class="bx bx-menu" id="menu-icon"></div>
-
-      <nav class="navbar">
-        <a href="#home" class="active">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#technology">Technologies</a>
-        <a href="#contact">Contact</a>
-
-        <span class="active-nav"></span>
+      <nav class="navbar" id="navbar">
+        <a href="#home" class="active" data-i18n="nav.home">Home</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#services" data-i18n="nav.services">Services</a>
+        <a href="#technology" data-i18n="nav.technologies">Technologies</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
       </nav>
 
-      <div class="btn" id="language-icon">pl</div>
-      <div class="bx bx-moon" id="darkMode-icon"></div>
+      <div class="header-actions">
+        <button
+          class="header-action"
+          id="language-icon"
+          type="button"
+          aria-label="Change language"
+        >
+          PL
+        </button>
+
+        <button
+          class="header-action bx bx-moon"
+          id="darkMode-icon"
+          type="button"
+          aria-label="Switch to dark mode"
+        ></button>
+
+        <button
+          class="header-action bx bx-menu"
+          id="menu-icon"
+          type="button"
+          aria-label="Open navigation"
+          aria-expanded="false"
+        ></button>
+      </div>
     </header>
 
-    <!-- home section design -->
-    <section class="home" id="home">
-      <div class="home-content">
-        <h1>Quality <span>Software</span></h1>
+    <div class="page-layout">
+      <aside class="page-side page-side-left">
+        <!-- future content / ad / decoration -->
+      </aside>
 
-        <div class="text-animate">
-          <h3>Software & Quality Engineering</h3>
-        </div>
+      <main class="page-content">
+        <!-- home section design -->
+        <section class="home" id="home">
+          <div class="home-content">
+            <h1>
+              <span data-i18n="home.titleFirst">Quality</span>
+              <span data-i18n="home.titleSecond">Software</span>
+            </h1>
 
-        <p>
-          Software development, quality assurance and business automation
-          focused on practical solutions that solve real business problems.
-        </p>
+            <div class="text-animate">
+              <h3 data-i18n="home.subtitle">Software & Quality Engineering</h3>
+            </div>
 
-        <div class="btn-box">
-          <a href="#services" class="btn">Our Services</a>
-          <a href="#contact" class="btn">Let's Talk</a>
-        </div>
-      </div>
+            <p data-i18n="home.description">
+              Software development, quality assurance and business automation
+              focused on practical solutions that solve real business problems.
+            </p>
 
-      <div class="home-img">
-        <img class="home-img light-logo" src="img/logo-transparent.png" />
-        <img class="home-img dark-logo" src="img/logo_colour.png" />
-      </div>
+            <div class="btn-box">
+              <a href="#services" class="btn" data-i18n="home.services"
+                >Our Services</a
+              >
+              <a href="#contact" class="btn" data-i18n="home.contact"
+                >Let's Talk</a
+              >
+            </div>
 
-      <div class="home-sci">
-        <a
-          href="https://www.linkedin.com/in/kamil-maleszko"
-          target="_blank"
-          rel="noopener noreferrer"
-          ><i class="bx bxl-linkedin"></i
-        ></a>
-        <a href="mailto:kontakt@qsoftware.com.pl"
-          ><i class="bx bxs-envelope"></i
-        ></a>
-        <a href="tel:+48503148227"><i class="bx bx-mobile-alt"></i></a>
-      </div>
+            <div class="home-sci">
+              <a
+                href="https://www.linkedin.com/in/kamil-maleszko"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <i class="bx bxl-linkedin"></i>
+              </a>
 
-      <div class="home-imgHover"></div>
-    </section>
+              <a href="mailto:kontakt@qsoftware.com.pl" aria-label="Email">
+                <i class="bx bxs-envelope"></i>
+              </a>
 
-    <!-- about section design -->
-    <section class="about" id="about">
-      <h2 class="heading">About <span>Quality Software</span></h2>
-
-      <div class="about-content">
-        <h3>Technology focused on real business value</h3>
-
-        <p>
-          Quality Software helps businesses build reliable software, improve
-          product quality and automate repetitive processes. The focus is on
-          practical solutions that solve real problems and support everyday
-          business operations.
-        </p>
-
-        <p>
-          The work combines software development, quality assurance and business
-          automation — from web applications and backend services, through API
-          and database testing, to improving existing systems and processes.
-        </p>
-
-        <p>
-          Each project is approached with an emphasis on simplicity,
-          maintainability and long-term value, without unnecessary complexity.
-        </p>
-      </div>
-    </section>
-
-    <!-- services section design -->
-    <section class="services" id="services">
-      <h2 class="heading">Our <span>Services</span></h2>
-
-      <div class="services-container">
-        <div class="services-box">
-          <h3>Software Development</h3>
-
-          <p>
-            Development and improvement of web applications, backend services
-            and business-oriented software solutions.
-          </p>
-
-          <p>
-            From new features and integrations to maintaining and modernizing
-            existing systems.
-          </p>
-        </div>
-
-        <div class="services-box">
-          <h3>Quality Assurance</h3>
-
-          <p>
-            Manual and automated testing of web applications, APIs and backend
-            systems with a strong focus on reliability and regression
-            prevention.
-          </p>
-
-          <p>
-            Test automation, API testing, integration testing and quality
-            improvements across the software development lifecycle.
-          </p>
-        </div>
-
-        <div class="services-box">
-          <h3>Business Automation</h3>
-
-          <p>
-            Automation of repetitive tasks and business processes to reduce
-            manual work, improve consistency and save time.
-          </p>
-
-          <p>
-            Custom integrations, data processing and lightweight tools tailored
-            to specific operational needs.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- technology section design -->
-    <section class="technology" id="technology">
-      <h2 class="heading">Our <span>Technologies</span></h2>
-
-      <div class="technology-container">
-        <div class="technology-box">
-          <h3>Backend & Development</h3>
-          <p>Java, Spring Boot, REST APIs, Maven, SQL and PostgreSQL.</p>
-        </div>
-
-        <div class="technology-box">
-          <h3>Test Automation</h3>
-          <p>Playwright, Selenium, WebdriverIO, Cucumber and TestNG.</p>
-        </div>
-
-        <div class="technology-box">
-          <h3>Quality & API Testing</h3>
-          <p>
-            Functional testing, regression testing, integration testing, API
-            testing and database verification.
-          </p>
-        </div>
-
-        <div class="technology-box">
-          <h3>Tools & Delivery</h3>
-          <p>Git, GitHub, GitLab, Jira, Docker and CI/CD workflows.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- contact section design -->
-    <section class="contact" id="contact">
-      <h2 class="heading">Let's <span>Work Together</span></h2>
-
-      <div class="contact-content">
-        <h3>Have a project or an idea?</h3>
-
-        <p>
-          Whether you need help with software development, quality assurance,
-          business automation or improving an existing solution, let's talk
-          about how Quality Software can support your project.
-        </p>
-
-        <div class="contact-details">
-          <a href="mailto:kontakt@qsoftware.com.pl" class="contact-item">
-            <i class="bx bxs-envelope"></i>
-            <span>kontakt@qsoftware.com.pl</span>
-          </a>
-
-          <a href="tel:+48503148227" class="contact-item">
-            <i class="bx bx-mobile-alt"></i>
-            <span>+48 503 148 227</span>
-          </a>
-
-          <a
-            href="https://www.linkedin.com/in/kamil-maleszko"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="contact-item"
-          >
-            <i class="bx bxl-linkedin"></i>
-            <span>LinkedIn</span>
-          </a>
-        </div>
-      </div>
-    </section>
-    <!-- <section class="contact" id="contact">
-      <h2 class="heading">Contact <span>Me!</span></h2>
-
-      <form action="#">
-        <div class="input-box">
-          <div class="input-field">
-            <input type="text" placeholder="Full Name" required />
-            <span class="focus"></span>
+              <a href="tel:+48503148227" aria-label="Phone">
+                <i class="bx bx-mobile-alt"></i>
+              </a>
+            </div>
           </div>
 
-          <div class="input-field">
-            <input type="text" placeholder="Email Address" required />
-            <span class="focus"></span>
+          <div class="home-img">
+            <img
+              class="hero-logo light-logo"
+              src="img/logo-transparent.png"
+              alt="Quality Software logo"
+            />
+
+            <img
+              class="hero-logo dark-logo"
+              src="img/logo_colour.png"
+              alt="Quality Software logo"
+            />
           </div>
-        </div>
 
-        <div class="input-box">
-          <div class="input-field">
-            <input type="text" placeholder="Mobile Number" required />
-            <span class="focus"></span>
+          <div class="home-imgHover"></div>
+        </section>
+
+        <!-- about section design -->
+        <section class="about" id="about">
+          <div class="about-layout">
+            <div class="about-heading">
+              <p class="section-label">01 / About</p>
+              <h2 class="heading">
+                <span data-i18n="about.headingFirst">About</span>
+                <span data-i18n="about.headingSecond">Quality Software</span>
+              </h2>
+            </div>
+
+            <div class="about-content">
+              <h3 data-i18n="about.title">
+                Technology focused on real business value
+              </h3>
+
+              <p data-i18n="about.p1">
+                Quality Software helps businesses build reliable software,
+                improve product quality and automate repetitive processes. The
+                focus is on practical solutions that solve real problems and
+                support everyday business operations.
+              </p>
+
+              <p data-i18n="about.p2">
+                The work combines software development, quality assurance and
+                business automation — from web applications and backend
+                services, through API and database testing, to improving
+                existing systems and processes.
+              </p>
+
+              <p data-i18n="about.p3">
+                Each project is approached with an emphasis on simplicity,
+                maintainability and long-term value, without unnecessary
+                complexity.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- services section design -->
+        <section class="services" id="services">
+          <div class="services-header">
+            <p class="section-label">02 / Services</p>
+
+            <h2>
+              <span data-i18n="services.headingFirst">Our</span>
+              <span data-i18n="services.headingSecond">Services</span>
+            </h2>
           </div>
 
-          <div class="input-field">
-            <input type="text" placeholder="Email Subject" required />
-            <span class="focus"></span>
+          <div class="services-container">
+            <article class="services-box">
+              <h3 data-i18n="services.software.title">Software Development</h3>
+
+              <p data-i18n="services.software.p1">
+                Development and improvement of web applications, backend
+                services and business-oriented software solutions.
+              </p>
+
+              <p data-i18n="services.software.p2">
+                From new features and integrations to maintaining and
+                modernizing existing systems.
+              </p>
+
+              <span class="service-number">01</span>
+            </article>
+
+            <article class="services-box">
+              <h3 data-i18n="services.qa.title">Quality Assurance</h3>
+
+              <p data-i18n="services.qa.p1">
+                Manual and automated testing of web applications, APIs and
+                backend systems with a strong focus on reliability and
+                regression prevention.
+              </p>
+
+              <p data-i18n="services.qa.p2">
+                Test automation, API testing, integration testing and quality
+                improvements across the software development lifecycle.
+              </p>
+
+              <span class="service-number">02</span>
+            </article>
+
+            <article class="services-box">
+              <h3 data-i18n="services.automation.title">Business Automation</h3>
+
+              <p data-i18n="services.automation.p1">
+                Automation of repetitive tasks and business processes to reduce
+                manual work, improve consistency and save time.
+              </p>
+
+              <p data-i18n="services.automation.p2">
+                Custom integrations, data processing and lightweight tools
+                tailored to specific operational needs.
+              </p>
+
+              <span class="service-number">03</span>
+            </article>
           </div>
-        </div>
+        </section>
 
-        <div class="textarea-field">
-          <textarea
-            name=""
-            id=""
-            cols="30"
-            rows="10"
-            placeholder="Your Message"
-            required
-          ></textarea>
-          <span class="focus"></span>
-        </div>
+        <!-- technology section design -->
+        <section class="technology" id="technology">
+          <div class="technology-layout">
+            <div class="technology-heading">
+              <p class="section-label">03 / Technologies</p>
 
-        <div class="btn-box btns">
-          <button type="submit" class="btn">Submit</button>
-        </div>
-      </form>
-    </section> -->
+              <h2>
+                <span data-i18n="technology.headingFirst">Our</span>
+                <span data-i18n="technology.headingSecond">Technologies</span>
+              </h2>
+            </div>
+
+            <div class="technology-container">
+              <article class="technology-box">
+                <span class="technology-number">01</span>
+
+                <h3 data-i18n="technology.backend.title">
+                  Backend & Development
+                </h3>
+
+                <p data-i18n="technology.backend.text">
+                  Java, Spring Boot, REST APIs, Maven, SQL and PostgreSQL.
+                </p>
+              </article>
+
+              <article class="technology-box">
+                <span class="technology-number">02</span>
+
+                <h3 data-i18n="technology.automation.title">Test Automation</h3>
+
+                <p data-i18n="technology.automation.text">
+                  Playwright, Selenium, WebdriverIO, Cucumber and TestNG.
+                </p>
+              </article>
+
+              <article class="technology-box">
+                <span class="technology-number">03</span>
+
+                <h3 data-i18n="technology.testing.title">
+                  Quality & API Testing
+                </h3>
+
+                <p data-i18n="technology.testing.text">
+                  Functional testing, regression testing, integration testing,
+                  API testing and database verification.
+                </p>
+              </article>
+
+              <article class="technology-box">
+                <span class="technology-number">04</span>
+
+                <h3 data-i18n="technology.delivery.title">Tools & Delivery</h3>
+
+                <p data-i18n="technology.delivery.text">
+                  Git, GitHub, GitLab, Jira, Docker and CI/CD workflows.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- contact section design -->
+        <section class="contact" id="contact">
+          <div class="contact-layout">
+            <div class="contact-heading">
+              <p class="section-label">04 / Contact</p>
+
+              <h2>
+                <span data-i18n="contact.headingFirst">Let's</span>
+                <span data-i18n="contact.headingSecond">Work Together</span>
+              </h2>
+            </div>
+
+            <div class="contact-content">
+              <h3 data-i18n="contact.title">Have a project or an idea?</h3>
+
+              <p data-i18n="contact.description">
+                Whether you need help with software development, quality
+                assurance, business automation or improving an existing
+                solution, let's talk about how Quality Software can support your
+                project.
+              </p>
+
+              <div class="contact-details">
+                <a href="mailto:kontakt@qsoftware.com.pl" class="contact-item">
+                  <span class="contact-label">Email</span>
+                  <span>kontakt@qsoftware.com.pl</span>
+                </a>
+
+                <a href="tel:+48503148227" class="contact-item">
+                  <span class="contact-label">Phone</span>
+                  <span>+48 503 148 227</span>
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/in/kamil-maleszko"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="contact-item"
+                >
+                  <span class="contact-label">LinkedIn</span>
+                  <span>kamil-maleszko</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <aside class="page-side page-side-right">
+        <!-- future content / ad / decoration -->
+      </aside>
+    </div>
 
     <!-- footer design -->
-
     <footer class="footer">
-      <div class="footer-text">
-        <p>&copy; 2026 Quality Software. All rights reserved.</p>
+      <div class="footer-inner">
+        <div class="footer-text">
+          <p data-i18n="footer.copyright">
+            © 2026 Quality Software. All rights reserved.
+          </p>
 
-        <p class="footer-services">
-          Software Development • Quality Assurance • Business Automation
-        </p>
-      </div>
+          <p class="footer-services" data-i18n="footer.services">
+            Software Development • Quality Assurance • Business Automation
+          </p>
+        </div>
 
-      <div class="footer-iconTop">
-        <a href="#home" aria-label="Back to top">
-          <i class="bx bx-up-arrow-alt"></i>
-        </a>
+        <div class="footer-iconTop">
+          <a href="#home" aria-label="Back to top">
+            <i class="bx bx-up-arrow-alt"></i>
+          </a>
+        </div>
       </div>
     </footer>
 
