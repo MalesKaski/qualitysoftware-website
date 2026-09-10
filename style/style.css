@@ -38,11 +38,44 @@ html {
   overflow-x: hidden;
 }
 
-body {
+/* body {
   min-width: 32rem;
   background: var(--bg-color);
   color: var(--text-color);
   font-family: var(--font-primary);
+}
+
+main {
+  width: 100%;
+  max-width: 160rem;
+  margin: 0 auto;
+} */
+
+body {
+  min-width: 32rem;
+
+  background-color: #f1f1f1;
+  background-image:
+    linear-gradient(rgba(0, 148, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 148, 255, 0.055) 1px, transparent 1px);
+
+  background-size: 4rem 4rem;
+
+  color: var(--text-color);
+  font-family: var(--font-primary);
+}
+
+body.dark-mode {
+  background-color: #151515;
+  background-image:
+    linear-gradient(rgba(0, 148, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 148, 255, 0.07) 1px, transparent 1px);
+}
+
+main {
+  width: 100%;
+  max-width: 180rem;
+  margin: 0 auto;
 }
 
 a {
@@ -139,7 +172,10 @@ body.dark-mode .dark-logo {
   transition: color 0.2s ease;
 }
 
-.navbar a:hover,
+.navbar a:hover:not(.active) {
+  color: var(--main-color);
+  opacity: 0.7;
+}
 .navbar a.active {
   color: var(--main-color);
 }
@@ -178,7 +214,7 @@ body.dark-mode .dark-logo {
 
 section {
   width: 100%;
-  padding: 10rem var(--page-padding);
+  padding: 12rem var(--page-padding);
 }
 
 .heading {
@@ -363,7 +399,12 @@ section {
    ========================= */
 
 .about {
-  background: var(--second-bg-color);
+  background: linear-gradient(
+    to bottom,
+    var(--second-bg-color) 0%,
+    var(--second-bg-color) 88%,
+    var(--bg-color) 100%
+  );
 }
 
 .about-layout {
@@ -435,7 +476,12 @@ section {
    ========================= */
 
 .services {
-  background: var(--bg-color);
+  background: linear-gradient(
+    to bottom,
+    var(--bg-color) 0%,
+    var(--bg-color) 92%,
+    var(--second-bg-color) 100%
+  );
 }
 
 .services-header {
@@ -527,7 +573,12 @@ section {
    ========================= */
 
 .technology {
-  background: var(--second-bg-color);
+  background: linear-gradient(
+    to bottom,
+    var(--second-bg-color) 0%,
+    var(--second-bg-color) 88%,
+    var(--bg-color) 100%
+  );
 }
 
 .technology-layout {
@@ -606,7 +657,12 @@ section {
    ========================= */
 
 .contact {
-  background: var(--bg-color);
+  background: linear-gradient(
+    to bottom,
+    var(--bg-color) 0%,
+    var(--bg-color) 92%,
+    var(--second-bg-color) 100%
+  );
 }
 
 .contact-layout {
@@ -845,7 +901,7 @@ section {
    MOBILE
    ========================= */
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   :root {
     --page-padding: 5%;
     --header-height: 6.4rem;
@@ -903,13 +959,33 @@ section {
     justify-content: center;
   }
 
-  .services-container {
+  .technology-layout {
     grid-template-columns: 1fr;
+    gap: 4rem;
   }
 
   .footer-inner {
     flex-direction: column;
     text-align: center;
+  }
+
+  /* Mobile section rhythm */
+  section {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+
+  .home {
+    min-height: 100svh;
+    padding-top: calc(var(--header-height) + 4rem);
+    padding-bottom: 5rem;
+  }
+
+  .about,
+  .services,
+  .technology,
+  .contact {
+    min-height: auto;
   }
 }
 
@@ -948,6 +1024,7 @@ section {
   }
 
   section {
+    padding: 6rem 2rem;
     padding-left: 2rem;
     padding-right: 2rem;
   }
@@ -961,5 +1038,11 @@ section {
   .contact-item {
     grid-template-columns: 1fr;
     gap: 0.6rem;
+  }
+
+  .home {
+    min-height: 100svh;
+    padding-top: calc(var(--header-height) + 3rem);
+    padding-bottom: 4rem;
   }
 }
