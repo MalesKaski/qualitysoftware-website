@@ -104,7 +104,7 @@ darkModeIcon.addEventListener("click", () => {
 
 setTheme(currentTheme);
 
-// dark / light mode
+// translations
 const translations = {
   en: {
     "nav.home": "Home",
