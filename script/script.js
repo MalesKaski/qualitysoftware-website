@@ -125,7 +125,7 @@ const translations = {
     "about.headingSecond": "Quality Software",
     "about.title": "Technology focused on real business value",
     "about.p1":
-      "Quality Software helps businesses build reliable software, improve product quality and automate repetitive processes. The focus is on practical solutions that solve real problems and support everyday business operations.",
+      "Quality Software is an independent software engineering and quality assurance brand operated by Kamil Maleszko. It helps businesses build reliable software, improve product quality and automate repetitive processes. The focus is on practical solutions that solve real problems and support everyday business operations.",
     "about.p2":
       "The work combines software development, quality assurance and business automation — from web applications and backend services, through API and database testing, to improving existing systems and processes.",
     "about.p3":
@@ -194,7 +194,7 @@ const translations = {
     "about.headingSecond": "Quality Software",
     "about.title": "Technologia skoncentrowana na realnej wartości biznesowej",
     "about.p1":
-      "Quality Software pomaga firmom tworzyć niezawodne oprogramowanie, podnosić jakość produktów oraz automatyzować powtarzalne procesy. Skupiamy się na praktycznych rozwiązaniach realnych problemów i codziennych potrzeb biznesowych.",
+      "Quality Software to niezależna marka specjalizująca się w tworzeniu oprogramowania i zapewnianiu jego jakości, prowadzona przez Kamila Maleszko. Pomaga firmom tworzyć niezawodne oprogramowanie, podnosić jakość produktów oraz automatyzować powtarzalne procesy. Skupiamy się na praktycznych rozwiązaniach realnych problemów i codziennych potrzeb biznesowych.",
     "about.p2":
       "Łączymy tworzenie oprogramowania, zapewnienie jakości oraz automatyzację biznesową — od aplikacji webowych i usług backendowych, przez testowanie API i baz danych, aż po rozwój i usprawnianie istniejących systemów i procesów.",
     "about.p3":
